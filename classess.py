@@ -110,28 +110,24 @@ store.remove_item('Milk')
 print(store.list_items())
 
 class Shape:
-    def __init__(self):
-        pass
-
-    def area(self):
-        pass
+    def __init__(self, value):
+        self.value = value
 
 class Circle(Shape):
-    def __init__(self, radius):
-        super().__init__()
-        self.radius = radius
-    
+    def __init__(self, value, pi=3.14):
+        super().__init__(value)
+
+        self.pi = pi
+
     def area(self):
-        return 3.14 * self.radius ** 2
+        return self.pi * self.value ** 2
 
 class Square(Shape):
-    def __init__(self, lenght):
-        super().__init__()
-        
-        self.lenght = lenght
+    def __init__(self, value):
+        super().__init__(value)
 
     def area(self):
-        return self.lenght ** 2
+        return self.value ** 2
 
 circle = Circle(5)
 square = Square(10)
